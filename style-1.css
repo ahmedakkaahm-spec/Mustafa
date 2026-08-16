@@ -1,0 +1,174 @@
+  
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(252, 244, 233);
+} 
+  
+  
+  
+  
+header {
+    background-color: floralwhite;
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000999 ; /*حط رقم كبير حتى لا يختفي تحت صوره مثلا */
+    display: flex;
+    justify-content: space-between; /*يفصل بين اعضاء الجروب */
+    align-items: center; /*بيسنطر في النص */
+    padding: 10px 150px; /*المسافه بينه و اي حاجه تانيه */
+ }
+
+header a {
+    background-color: floralwhite;
+ }
+
+ .name {
+    text-decoration: none;  /*يزيل الخط الموجود تحت الرابط */
+
+    text-transform: uppercase; /*يحول الكلام الي capetal */
+    font-weight:  500; 
+    font-size: 1.7em;
+ }
+
+.conect {
+    color:rgb(170, 138, 89);
+    text-decoration: none;  /*يزيل الخط الموجود تحت الرابط */
+    font-weight:  300; 
+    font-size: 1.1em;
+    padding-left: 20px;
+}
+
+.conect :hover {
+    color: rgb(180, 134, 63);
+}
+
+section{
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh; /* vh المنظور علي حسب حجم الشاشه */
+    display: flex;
+    align-items: center ;
+    background: url(pic.png) no-repeat;
+    background-size: 30em 50em ;
+    background-position: center right;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    color: rgb(179, 118, 27);
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(202, 138, 42);
+    font-size: 3em ;
+
+}
+
+.main-button {
+    color: rgb(107, 81, 41);
+    background-color: rgb(224, 200, 168);
+    text-decoration: none;
+    font-size: 1.3em ;
+    display: inline-block;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.box {
+    margin-left: 0.0005em;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    color: rgb(59, 33, 0);
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+
+
+}
+
+.card {
+    background-color: rgb(247, 181, 83);
+    width: 20em;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15px);
+    font-size: 1.3em ;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    background-color: rgb(247, 181, 83);
+    padding-left:  85px;
+    padding-right: 80px;
+}
+
+.card p {
+    background-color: transparent;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  header { padding: 10px 20px; flex-direction: column; gap: 8px; }
+  .name { font-size: 1.4em; }
+  .conect { display:flex; flex-wrap:wrap; justify-content:center; padding-left:0; gap:8px; }
+  .conect a { padding-left:0; font-size:.95em; }
+  section { padding:100px 20px 60px; }
+  .main { min-height:100vh; background-size:20em auto; background-position:center bottom; background-attachment:scroll; align-items:flex-start; padding-top:150px; }
+  .box { width:100%; margin-left:0; text-align:center; position:relative; z-index:2; }
+  .main h2 { font-size:1.1em; }
+  .main h2 span { font-size:2.3em; }
+  .main h3 { font-size:1em; }
+  .main-button { font-size:1.1em; }
+  .cards { width:100%; gap:15px; }
+  .card { width:min(20em,100%); }
+  .card h3 { padding-left:10px; padding-right:10px; text-align:center; }
+  .title { font-size:26px; }
+}
+@media (max-width: 480px) {
+  header { padding:8px 12px; }
+  .name { font-size:1.25em; }
+  .conect { gap:6px; }
+  .conect a { font-size:.85em; }
+  section { padding-left:15px; padding-right:15px; }
+  .main { padding-top:140px; background-size:16em auto; }
+  .main h2 span { font-size:2em; }
+  .card { font-size:1.1em; }
+}
